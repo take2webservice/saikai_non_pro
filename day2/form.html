@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>フォーム</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="フォームのサンプル">
+    </head>
+    <body>
+        <form>
+            <label for="user_name">名前</label>
+            <input type="text" id="user_name" name="user_name">
+            
+            <br>
+
+            性別
+            <label for="man">男性</label>
+            <input type="radio" id="man" value="男性">
+            <label for="woman">女性</label>
+            <input type="radio" id="woman" value="女性">
+
+            <br>
+
+            <label for="prefecture">所在地</label>
+            <select name="prefecture" id="prefecture">
+                <option value="1">北海道</option>
+                <option value="2">青森</option>
+                <option value="3">秋田</option>
+                <option value="4">岩手</option>
+            </select>
+
+            <br>
+
+            好きな食べもの
+            <input type="checkbox" id="wasyoku" name="food">
+            <label for="wasyoku">和食</label>
+            <input type="checkbox" id="yosyoku" name="food">
+            <label for="yosyoku">洋食</label>
+            <input type="checkbox" id="chuka" name="food">
+            <label for="chuka">中華</label>
+
+            <br>
+
+            <label for="biko">備考</label>
+            <textarea name="biko" id="biko" cols="50" rows="5"></textarea>
+            <br>
+            
+            <button type="submit">送信</button>
+        </form>
+    </body>
+</html>

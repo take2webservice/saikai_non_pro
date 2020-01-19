@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTMLチートシート</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="HTMLのチートシート、title, meta,h1~h6, p, br, ul, ol, li, tableなどの説明">
+    </head>
+    <body>
+        <h1>HTMLチートシート</h1>
+        <p>授業で習ってHTMLの内容をHTMLで書いていく</p>
+
+        <h2>基本フォーマット</h2>
+        <p>HTMLは以下のフォーマットで記述</p>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+
+        <h2>タイトルの付け方</h2>
+        <p>headタグの中にtitleタグで記述</p>
+        <pre>
+            <code>
+                &lt;title&gt;HTMLのフォーマット&lt;/title&gt;
+            </code>
+        </pre>
+
+        <h2>文字コードの指定</h2>
+        <p>headタグの中にmetaタグのcharset属性で記述</p>
+        <pre>
+            <code>
+                &lt;meta charset="UTF-8"&gt;
+            </code>
+        </pre>
+
+        <h2>概要を指定</h2>
+        <p>headタグの中にmetaタグのname属性をdescriptionにし、content属性に文章の概要を入れる</p>
+        <pre>
+            <code>
+                 &lt;meta name="description" content="文章の概要"&gt;
+            </code>
+        </pre>
+
+        <h2>見出しの指定</h2>
+        <ul>
+            <li>h1~h6のタグを用いて記述</li>
+            <li>数字が小さいほどランクが高い</li>
+        </ul>
+        <pre>
+            <code>
+                &lt;h1&gt;1番大きい見出しの内容&lt;/h1&gt;
+                &lt;h2&gt;2番目に大きい見出しの内容&lt;/h2&gt;
+                &lt;h3&gt;3番目に大きい見出しの内容&lt;/h3&gt;
+                &lt;h4&gt;4番目に大きい見出しの内容&lt;/h4&gt;
+                &lt;h5&gt;5番目に大きい見出しの内容&lt;/h5&gt;
+                &lt;h6&gt;6番目に大きい見出しの内容&lt;/h6&gt;
+            </code>
+        </pre>
+
+        <h2>段落の指定</h2>
+        <p>pタグで囲んだものは段落になる</p>
+        <pre>
+            <code>
+                &lt;p&gt;この中は段落になります&lt;/p&gt;
+                &lt;p&gt;ここは次の段落になります&lt;/p&gt;
+            </code>
+        </pre>
+        
+        <h2>改行の指定</h2>
+        <p>brタグを書くと改行できる</p>
+        <pre>
+            <code>
+                &lt;p&gt;
+                段落の中で改行を入れたい場合は&lt;br&gt;
+                brタグを使って改行します。
+                &lt;/p&gt;
+            </code>
+        </pre>
+
+        <h2>リスト表示</h2>
+        <p>リストには「列挙型のリスト」と「並び順付きのリスト」が存在する</p>
+        
+        <h3>列挙型のリスト</h3>
+        <ol>
+            <li>列挙したい項目を書く</li>
+            <li>各項目をliタグで囲む</li>
+            <li>最後に全体をulタグで囲む</li>
+        </ol>
+        <pre>
+            <code>
+                &lt;ul&gt;
+                &lt;li&gt;リストとして表示される要素1&lt;/li&gt;
+                &lt;li&gt;リストとして表示される要素2&lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+
+        <h3>番号付きリスト</h3>
+        <ol>
+            <li>番号をつけたい順に項目を書く</li>
+            <li>各項目をliタグで囲む</li>
+            <li>最後に全体をolタグで囲む</li>
+        </ol>
+        <pre>
+            <code>
+                &lt;ol&gt;
+                &lt;li&gt;リストとして表示される要素1&lt;/li&gt;
+                &lt;li&gt;リストとして表示される要素2&lt;/li&gt;
+                &lt;/ol&gt;
+            </code>
+        </pre>
+
+        <h2>文章間のリンク</h2>
+        <p>ページ間のリンクにはaタグを利用し、href属性にリンク先のURL、aタグの中にリンクを適用する文字を指定</p>
+        <pre>
+            <code>
+                &lt;a href="https://google.com"&gt;Google&lt;/a&gt;を表示
+            </code>
+        </pre>
+        
+        <h2>画像の表示</h2>
+        画像の表示にはimgタグを利用し、src属性に画像のURL、alt属性に画像の概要を指定します
+        <pre>
+            <code>
+                &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/500px-Google_2015_logo.svg.png"&gt;Google&lt;/a&gt;を表示
+            </code>
+        </pre>
+        
+        <h2>テーブルの表示</h2>
+        <p>テーブルの表示には</p>
+        <ul>
+            <li>tableタグでテーブル全体を囲み</li>
+            <li>tableタグの中にはヘッダを表すtheadタグ、本体を表すtbodyタグを用意する</li>
+            <li>thead、tbodyの中はtrタグで行を表し、その中に見出しセルを表すthタグ、もしくは普通のセルを表すtdタグを配置</li>
+        </ul>
+
+        <pre>
+          <code>
+            &lt;table&gt;
+              &lt;thead&gt;
+                &lt;tr&gt;
+                  &lt;th&gt;テーブルヘッダ1&lt;/th&gt;
+                  &lt;th&gt;テーブルヘッダ2&lt;/th&gt;
+                &lt;/tr&gt;
+              &lt;/thead&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;1行目の情報1&lt;/td&gt;
+                    &lt;td&gt;1行目の情報2&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;2行目の情報1&lt;/td&gt;
+                    &lt;td&gt;2行目の情報2&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          </code>
+        </pre>
+
+        <h2>参考</h2>
+        <img src="http://www.htmq.com/images/logo.gif" alt="HTML5クイックリファレンスのロゴ">
+        <a href="http://www.htmq.com/html5/">HTML5クイックリファレンス</a>
+    </body>
+</html>
